@@ -23,7 +23,9 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 33
-
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.julienvignali.phone_number'
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
